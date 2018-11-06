@@ -1,0 +1,89 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+</script>
+<div class="loading">
+  <div class="loading-bar"></div>
+  <div class="loading-bar"></div>
+  <div class="loading-bar"></div>
+  <div class="loading-bar"></div>
+  <div class="loading-bar"></div><br><br>
+  <div class="text" style="color:green; font-size:14px">Loading..</div>
+</div>
+
+<style>
+	.loading {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	}
+	.loading-bar {
+	  display: inline-block;
+	  width: 6px;
+	  height: 7px;
+	  border-radius: 4px;
+	  animation: loading 1s infinite ease-in-out;
+	}
+	.text{
+		-webkit-animation:colorchange 5s infinite alternate;
+		font-weight: bold;
+	}
+	.loading-bar:nth-child(1) {
+	  background-color: #3498db;
+	  animation-delay: 0;
+	}
+	.loading-bar:nth-child(2) {
+	  background-color: #c0392b;
+	  animation-delay: 0.10s;
+	}
+	.loading-bar:nth-child(3) {
+	  background-color: #f1c40f;
+	  animation-delay: .20s;
+	}
+	.loading-bar:nth-child(4) {
+	  background-color: #27ae60;
+	  animation-delay: .30s;
+	}
+	.loading-bar:nth-child(5) {
+	  background-color: #0000FF;
+	  animation-delay: .40s;
+	}
+	@keyframes loading {
+	  10% {
+		transform: scale(1);
+        transform:translateY(0px);
+	  }
+	  30% {
+		transform: scale(1, 2.2);
+        transform:translateY(-12px);
+	  }
+	  50% {
+		transform: scale(1);
+        transform:translateY(0px);
+	  }
+      65% {
+		transform: scale(1);
+        transform:translateY(12px);
+	  }
+      100%
+      {
+		transform: scale(1);
+        transform:translateY(0px);
+	  }
+	} 
+	@-webkit-keyframes colorchange {
+      20% { 
+        color: red;
+      }
+      40% {
+        color: green;
+      }
+      60% {
+        color: blue;
+      }
+      80% {
+        color: black;
+      }      
+      100% { 
+        color: #e408f3;
+      }
+    }
+</style>
